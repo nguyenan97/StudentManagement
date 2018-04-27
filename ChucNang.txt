@@ -1,0 +1,13 @@
+﻿					Đề tài quản lý sinh viên:
++Trang chủ: hiện thị thông báo, tuyển sinh... của trường
++Giới thiệu: Giới thiệu trường. Hiện thị danh sách giảng viên từ Database(hiện thị thông tin chi tiết của giảng viên)
++Phòng đào tạo: Trang Admin quản lý toàn bộ databse có thể thêm xóa sửa tất cả các dữ liệu của bảng trong database. Thêm user admin, thêm group.
++Sinh viên: đăng nhập vào xem đc tất cả các thông tin của sinh viên, xem được điểm của sinh viên.
++Giảng viên: đăng nhập xem thông tin của giảng viên
+
+------------------------*-----------------------
+Project bao gồm:
++1 project web Django
++1 file QLSV.sql (sử dụng MySql)
++1 file trình chiếu(link xem online: https://prezi.com/nubmd-9nvlxi/untitled-prezi/?utm_campaign=share&utm_medium=copy)
++1 file chức năng 
