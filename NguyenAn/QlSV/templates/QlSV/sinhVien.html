@@ -1,0 +1,195 @@
+{% extends "QlSV/base.html" %}
+{% load static %}
+{% block title %}Sinh Viên{% endblock %}
+{% block hello1 %}
+     <h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut"><span>Xin chào {{ sv1.ho }} {{ sv1.ten }}</span></h1>
+{% endblock %}
+{% block hello2 %}
+    <h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut"><span>Xin chào {{ sv1.ho }} {{ sv1.ten }}</span></h1>
+{% endblock %}
+ {% block hello3 %}
+     <h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut"><span>Xin chào {{ sv1.ho }} {{ sv1.ten }}</span></h1>
+{% endblock %}
+{% block content %}
+
+ <!-- Hero box -->
+        <div class="hero_boxes" >
+            <div class="hero_boxes_inner">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-4 hero_box_col">
+                            <div class="hero_box d-flex flex-row align-items-center justify-content-start">
+
+                                <div class="hero_box_content">
+
+                                    <a href="#kqht" class="hero_box_link"><h3 class="hero_box_title" >XEM KẾT QUẢ HỌC TẬP</h3></a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 hero_box_col">
+                            <div class="hero_box d-flex flex-row align-items-center justify-content-start">
+
+                                <div class="hero_box_content1">
+
+
+                                    <a href="#dkhp" class="hero_box_link"><h3 class="hero_box_title">ĐĂNG KÍ HỌC PHẦN</h3></a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 hero_box_col">
+                            <div class="hero_box d-flex flex-row align-items-center justify-content-start">
+
+                                <div class="hero_box_content">
+
+                                    <a href="#dsmh" class="hero_box_link"> <h3 class="hero_box_title">DANH SÁCH MÔN HỌC</h3></a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}
+
+
+{% block placeholder %}
+
+<br>
+
+    <!-- Popular -->
+
+	<div class="popular page_section" style="height: 660px " id = "kqht">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title text-center">
+                        <a href="{% url 'sv' %}" ><h1>BẢNG KẾT QUẢ HỌC TẬP</h1></a>
+
+
+
+
+                        <!---------->
+
+                        <form   id="login" class="search_form" method="POST" action="/login/" >
+                        {% csrf_token %}
+                            <div >
+
+                                 <input id="txtLogin" name="txtLogin" class="input_field search_form_name" type="text" placeholder="user name..." required="required" data-error="Course name is required.">
+                                <input id="txtPass" name="txtPass" class="input_field search_form_name" type="password" placeholder="password..." required="required" data-error="Course name is required.">
+                                  </div>
+
+
+                            <div class="modal-footer">
+                                <button id="btnLogin" type="submit" class="newsletter_submit_btn trans_300" value="Submit" data-dismiss="modal" >Đăng nhập</button>
+                            <!--button id="btnExit" type="button" class="newsletter_submit_btn trans_300" value="close" data-dismiss="modal">Thoát</button-->
+
+
+
+                        </div>
+
+
+                        </form>
+
+
+
+                        <!----------->
+
+
+
+
+					</div>
+				</div>
+			</div>
+                <h3>
+                 <table class="table table-hover" style="color:#1a1a1a ">
+
+                    <tbody>
+                      <tr>
+                        <td >Mã SV: </td>
+                        <td>{{ sv1.masv }}</td>
+                        <td>Giới Tính: </td>
+                          <td>{{ sv1.gioitinh }}</td>
+                      </tr>
+                      <tr>
+                        <td>Họ và Tên:</td>
+                        <td>{{ sv1.ho }} {{ sv1.ten }}</td>
+                        <td>Nơi Sinh: </td>
+                          <td>{{ sv1.noisinh_id }} </td>
+                      </tr>
+                      <tr>
+                        <td>Ngày Sinh: </td>
+                        <td>{{ sv1.ngaysinh }}</td>
+                        <td>Lớp: </td>
+                          <td>{{ sv1.malop_id }}</td>
+                      </tr>
+                    <tr>
+                        <td>Điểm: </td>
+                        <td>{{ diem.diemtk }}</td>
+
+                      </tr>
+                    </tbody>
+                  </table>
+
+
+                </h3>
+
+
+            </div>
+
+
+
+		</div>
+	</div>
+
+
+        <!-- Popular -->
+
+	<div class="popular page_section" style="height: 660px " id = "dkhp">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title text-center">
+                        <a href="{% url 'sv' %}" ><h1>ĐĂNG KÍ HỌC PHẦN</h1></a>
+					</div>
+				</div>
+			</div>
+            <h1>Nội dung đang câp nhật...</h1>
+
+
+            </div>
+
+
+
+		</div>
+	</div>
+    <!-- Popular -->
+
+	<div class="popular page_section" style="height: 660px " id = "dsmh">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title text-center">
+                        <a href="{% url 'sv' %}" ><h1>DANH SÁCH MÔN HỌC</h1></a>
+					</div>
+				</div>
+			</div>
+            <h1>Nội dung đang câp nhật...</h1>
+
+            </div>
+
+
+
+		</div>
+	</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,159 @@
+
+{% extends "QlSV/base.html" %}
+{% load static %}
+{% block title %}Đội ngũ giảng viên{% endblock %}
+
+{% block content %}
+ <!-- Hero box -->
+        <div class="hero_boxes" >
+            <div class="hero_boxes_inner">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-4 hero_box_col">
+                            <div class="hero_box d-flex flex-row align-items-center justify-content-start">
+
+                                <div class="hero_box_content">
+
+                                    <a href="#ThongTinGiangVien" class="hero_box_link"> <h3 class="hero_box_title">THÔNG TIN GIẢNG VIÊN</h3></a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 hero_box_col">
+                            <div class="hero_box d-flex flex-row align-items-center justify-content-start">
+
+                                <div class="hero_box_content1">
+
+                                    <a href="#HuongNghienCuu" class="hero_box_link"><h3 class="hero_box_title">HƯỚNG NGHIÊN CỨU</h3></a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 hero_box_col">
+                            <div class="hero_box d-flex flex-row align-items-center justify-content-start">
+
+                                <div class="hero_box_content">
+
+                                    <a href="#taiLieu" class="hero_box_link"><h3 class="hero_box_title">TÀI LIỆU GIẢNG DẠY</h3></a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}
+
+
+{% block placeholder %}
+
+
+    <!-- Popular -->
+
+	<div class="popular page_section" id="ThongTinGiangVien" >
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title text-center">
+						<h1>THÔNG TIN GIẢNG VIÊN</h1>
+					</div>
+				</div>
+			</div>
+            <h3>
+        <div class="container">
+
+                <table class="table table-hover">
+                    <thead style="border-bottom:0px">
+                        <tr style="border-top:0px">
+                            <th>Mã GV</th>
+                            <th>Họ và Tên GV</th>
+                            <th>Số điện thoại</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <tr>
+                                    <td>{{ teacherDetail.magv }}</td>
+                                    <td>{{ teacherDetail.ho }} {{ teacherDetail.ten }}</td>
+                                    <td>{{ teacherDetail.phone }}</td>
+                            </tr>
+                    </tbody>
+                </table>
+
+            </div>
+                </h3>
+            </div>
+		</div>
+	</div>
+    </div>
+    </div>
+    </div>
+
+<!-- Popular -->
+
+	<div class="popular page_section"style="height: 650px" id="HuongNghienCuu" >
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title text-center">
+						<h1>HƯỚNG NGHIÊN CỨU</h1>
+					</div>
+				</div>
+			</div>
+            <h3>Nội dung đang cập nhật...</h3>
+
+
+
+
+
+
+            </div>
+
+
+
+		</div>
+	</div>
+
+
+
+<!-- Popular -->
+
+	<div class="popular page_section" style="height: 650px" id="taiLieu">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title text-center">
+						<h1>TÀI LIỆU</h1>
+					</div>
+				</div>
+			</div>
+
+
+            <h3>Nội dung đang cập nhật...</h3>
+ <!---->
+
+
+
+
+            </div>
+
+
+
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

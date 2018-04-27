@@ -1,0 +1,164 @@
+{% extends "QlSV/base.html" %}
+{% load static %}
+{% block title %}Giảng Viên{% endblock %}
+{% block hello1 %}
+    <h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut"><span> Xin chào {{ gv1.ho }} {{ gv1.ten }}</span></h1>
+{% endblock %}
+{% block hello2 %}
+     <h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut"><span> Xin chào {{ gv1.ho }} {{ gv1.ten }}</span></h1>
+{% endblock %}
+ {% block hello3 %}
+     <h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut"><span> Xin chào {{ gv1.ho }} {{ gv1.ten }}</span></h1>
+{% endblock %}
+
+
+{% block content %}
+
+
+
+    <div class="hero_boxes">
+            <div class="hero_boxes_inner">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-4 hero_box_col">
+                            <div class="hero_box d-flex flex-row align-items-center justify-content-start">
+
+                                <div class="hero_box_content">
+                                    <a href="#hocPhan"><h3 class="hero_box_title">DANH SÁCH LỚP HỌC PHẦN</h3></a>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 hero_box_col">
+                            <div class="hero_box d-flex flex-row align-items-center justify-content-start">
+
+                                <div class="hero_box_content">
+                                    <a href="#lop"><h3 class="hero_box_title">DANH SÁCH SINH VIÊN THEO LỚP HỌC PHẦN</h3></a>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 hero_box_col">
+                            <div class="hero_box d-flex flex-row align-items-center justify-content-start">
+
+                                <div class="hero_box_content">
+                                    <a href="#diem"><h3 class="hero_box_title">NHẬP ĐIỂM</h3></a>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}
+
+
+{% block placeholder %}
+
+<br>
+
+    <!-- Popular -->
+
+	<div class="popular page_section" style="height: 660px " id = "hocPhan">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title text-center">
+                        <a href="{% url 'giangVien' %}" ><h1>DANH SÁCH LỚP HỌC PHẦN</h1></a>
+
+
+
+
+                        <!---------->
+
+                        <form   id="login" class="search_form" method="POST" action="/GiangVien/" >
+                        {% csrf_token %}
+                            <div >
+
+                                 <input id="txtLogin" name="txtLogin" class="input_field search_form_name" type="text" placeholder="user name..." required="required" data-error="Course name is required.">
+                                <input id="txtPass" name="txtPass" class="input_field search_form_name" type="password" placeholder="password..." required="required" data-error="Course name is required.">
+                                  </div>
+
+
+                            <div class="modal-footer">
+                                <button id="btnLogin" type="submit" class="newsletter_submit_btn trans_300" value="Submit" data-dismiss="modal" >Đăng nhập</button>
+                            <!--button id="btnExit" type="button" class="newsletter_submit_btn trans_300" value="close" data-dismiss="modal">Thoát</button-->
+
+
+
+                </div>
+
+
+</form>
+
+
+                        <!----------->
+
+
+
+
+					</div>
+				</div>
+			</div>
+
+
+            </div>
+
+
+
+		</div>
+	</div>
+
+
+        <!-- Popular -->
+
+	<div class="popular page_section" style="height: 660px " id = "lop">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title text-center">
+                        <a href="{% url 'giangVien' %}" ><h1>DANH SÁCH SINH VIÊN THEO LỚP HỌC PHẦN</h1></a>
+					</div>
+				</div>
+			</div>
+            <h1>Nội dung đang câp nhật...</h1>
+
+
+            </div>
+
+
+
+		</div>
+	</div>
+    <!-- Popular -->
+
+	<div class="popular page_section" style="height: 660px " id = "diem">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title text-center">
+                        <a href="{% url 'giangVien' %}" ><h1>NHẬP ĐIỂM</h1></a>
+					</div>
+				</div>
+			</div>
+            <h1>Nội dung đang câp nhật...</h1>
+
+            </div>
+
+
+
+		</div>
+	</div>
+
+
+
+{% endblock %}
